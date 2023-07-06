@@ -7,7 +7,6 @@ for (int i = 0; i < unsortedStringArray.Length; i++)
 {
   toBeSorted[i] = Int32.Parse(unsortedStringArray[i]);
 }
-
 // selection sort
 Console.Write("Selection sort result: ");
 for(int i = 0;i < toBeSorted.Length; i++)
@@ -25,8 +24,6 @@ for(int i = 0;i < toBeSorted.Length; i++)
   toBeSorted[max_index] = temprary;
   Console.Write(toBeSorted[i] + " ");
 }
-
-
 // insertion sort
 Console.Write("\nInsertion sort result: ");
 for(int i = 0; i< toBeSorted.Length ; i++)
