@@ -50,12 +50,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
       Console.Write("\nInsertion sort result: ");
       for (int i = 0; i < toBeSorted.Length; i++)
       {
-      int j = i + 1;
+        int j = i + 1;
         while (j < toBeSorted.Length && toBeSorted[j] > toBeSorted[j - 1])
         {
           int temprary = toBeSorted[j - 1];
           toBeSorted[j - 1] = toBeSorted[j];
           toBeSorted[j] = temprary;
+          j-=1;
         }
         Console.Write(toBeSorted[i] + " ");
       }
