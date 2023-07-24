@@ -6,11 +6,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             Console.Write("insert the array to be sorted: ");
             string? input= Console.ReadLine();
-            if (input == null)
-            {
-                int[] Unsorted = new int[0];
-            }
-            else
+            if (input != null)
             {
                 int[] Unsorted = StringToIntArray(input);
                 SelectionSort(Unsorted);
