@@ -17,55 +17,55 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // this function takes in a string that is the expected input of the user and changes it into an array of intergers
         public static int[] StringToIntArray(string NumbersAsString)
         {
-            char[] seperator = new char[] { ' ', '.', ',' };
-            string[] unsortedStringArray = NumbersAsString.Split(seperator, StringSplitOptions.RemoveEmptyEntries);
-            int[] intergerArray = new int[unsortedStringArray.Count()];
-            for (int i = 0; i < unsortedStringArray.Length; i++)
+            char[] _seperator = new char[] { ' ', '.', ',' };
+            string[] _unsortedStringArray = NumbersAsString.Split(_seperator, StringSplitOptions.RemoveEmptyEntries);
+            int[] _intergerArray = new int[_unsortedStringArray.Count()];
+            for (int i = 0; i < _unsortedStringArray.Length; i++)
             {
-                intergerArray[i] = int.Parse(unsortedStringArray[i]);
+                _intergerArray[i] = int.Parse(_unsortedStringArray[i]);
             }
-            return intergerArray;
+            return _intergerArray;
         }
 
         // this function prints out a sorted version of the array given to it as well as return the newly sorted array using selection sort
-        public static int[] SelectionSort(int[] toBeSorted)
+        public static int[] SelectionSort(int[] _toBeSorted)
         {
             Console.Write("Selection sort result: ");
-            for (int i = 0; i < toBeSorted.Length; i++)
+            for (int i = 0; i < _toBeSorted.Length; i++)
             {
-                int max_index = i;
-                for (int j = i + 1; j < toBeSorted.Length; j++)
+                int _maxIndex = i;
+                for (int j = i + 1; j < _toBeSorted.Length; j++)
                 {
-                    if (toBeSorted[j] > toBeSorted[max_index])
+                    if (_toBeSorted[j] > _toBeSorted[_maxIndex])
                     {
-                        max_index = j;
+                        _maxIndex = j;
                     }
                 }
-                int temprary = toBeSorted[i];
-                toBeSorted[i] = toBeSorted[max_index];
-                toBeSorted[max_index] = temprary;
-                Console.Write(toBeSorted[i] + " ");
+                int _temp = _toBeSorted[i];
+                _toBeSorted[i] = _toBeSorted[_maxIndex];
+                _toBeSorted[_maxIndex] = _temp;
+                Console.Write(_toBeSorted[i] + " ");
             }
-            return toBeSorted;
+            return _toBeSorted;
         }
 
-        public static int[] InsertionSort(int[] toBeSorted)
+        public static int[] InsertionSort(int[] _toBeSorted)
         {
             // insertion sort
             Console.Write("\nInsertion sort result: ");
-            for (int i = 0; i < toBeSorted.Length; i++)
+            for (int i = 0; i < _toBeSorted.Length; i++)
             {
                 int j = i + 1;
-                while (j < toBeSorted.Length && toBeSorted[j] > toBeSorted[j - 1])
+                while (j < _toBeSorted.Length && _toBeSorted[j] > _toBeSorted[j - 1])
                 {
-                    int temprary = toBeSorted[j - 1];
-                    toBeSorted[j - 1] = toBeSorted[j];
-                    toBeSorted[j] = temprary;
+                    int _temp = _toBeSorted[j - 1];
+                    _toBeSorted[j - 1] = _toBeSorted[j];
+                    _toBeSorted[j] = _temp;
                     j -= 1;
                 }
-                Console.Write(toBeSorted[i] + " ");
+                Console.Write(_toBeSorted[i] + " ");
             }
-            return toBeSorted;
+            return _toBeSorted;
         }
     }
 }
