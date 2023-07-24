@@ -19,7 +19,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             char[] _seperator = new char[] { ' ', '.', ',' };
             string[] _unsortedStringArray = NumbersAsString.Split(_seperator, StringSplitOptions.RemoveEmptyEntries);
-            int[] _intergerArray = new int[_unsortedStringArray.Count()];
+            int[] _intergerArray = new int[_unsortedStringArray.Length];
             for (int i = 0; i < _unsortedStringArray.Length; i++)
             {
                 _intergerArray[i] = int.Parse(_unsortedStringArray[i]);
